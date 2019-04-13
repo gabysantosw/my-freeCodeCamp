@@ -1,0 +1,265 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+
+/* CUSTOM PROPERTIES */
+:root {
+  /* COLORS */
+  --gray-2: hsl(0, 0%, 20%);
+  --gray-5: hsl(0, 0%, 50%);
+  --gray-9: hsl(0, 0%, 90%);
+  --rose-5: hsl(335, 100%, 50%);
+  --cyan-4: hsl(180, 100%, 40%);
+
+  /* SPACING */
+  --half: 8px;
+  --default: 16px;
+  --x2: 32px;
+  --x4: 64px;
+  --x8: 128px;
+
+  /* FONTS */
+  --mono: 'Roboto Mono', monospace;
+}
+
+/* RESETS */
+body {
+  margin: 0;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+/* DEFAULTS */
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+@media (max-width: 765px) { /* mobile */
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  html {
+    font-size: 70%;
+  }
+}
+
+body {
+  background-color: var(--gray-2);
+  font-family: var(--mono);
+}
+
+/* TYPOGRAPHY */
+
+.t-logo {
+  color: var(--gray-5);
+  letter-spacing: 0.4rem;
+}
+@media (max-width: 765px) { /* mobile */
+  .t-logo {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .t-logo {
+    font-size: 3.6rem;
+  }
+}
+
+.t-section {
+  color: var(--gray-9);
+  font-size: 3.6rem;
+}
+
+.t-basic {
+  color: var(--gray-5);
+  font-size: 2.4rem;
+}
+
+.t-small {
+  color: var(--gray-5);
+  font-size: 1.8rem;
+}
+
+.t-link {
+  padding: 0.2rem 0;
+  border-bottom: 0.3rem solid var(--rose-5);
+  color: var(--gray-9);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.t-link:hover {
+  cursor: pointer;
+  color: var(--cyan-4);
+  border-bottom-color: var(--cyan-4);
+}
+
+/* BASIC */
+
+/* header tag  */
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 0.6rem solid var(--cyan-4);
+  background-color: var(--gray-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 765px) { /* mobile */
+  .header {
+    height: 6.0rem;
+    padding: 0 var(--default);
+  }
+
+  .nav__link:not(:first-child) {
+    margin-left: var(--default);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .header {
+    height: 12.0rem;
+    padding: 0 var(--x4);
+  }
+
+  .nav__link:not(:first-child) {
+    margin-left: var(--x4);
+  }
+}
+
+
+/* main tag */
+.main {
+  width: 1024px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 765px) { /* mobile */
+  .main {
+    padding: 0 var(--x2);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .main {
+    padding: 0 var(--x8);
+  }
+}
+
+.section {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+@media (max-width: 765px) { /* mobile */
+  .section {
+    /* current header height */
+    padding-top: 6rem;
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .section {
+    padding-top: 12rem;
+  }
+}
+
+/* about section */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about__heading{
+  line-height: 110%;
+}
+@media (max-width: 765px) { /* mobile */
+  .about__heading {
+    margin-top: var(--x2);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .about__heading {
+    margin-top: var(--x8);
+  }
+}
+
+.about__content {
+  line-height: 150%;
+}
+@media (max-width: 765px) { /* mobile */
+  .about__content {
+    margin-top: var(--x2);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .about__content {
+    margin-top: var(--x4);
+  }
+}
+
+.about__contact {
+  margin-top: auto;
+}
+@media (max-width: 765px) { /* mobile */
+  .about__contact {
+    margin-bottom: var(--x4);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .about__contact {
+    margin-bottom: var(--x8);
+  }
+}
+
+/* projects section */
+@media (max-width: 765px) { /* mobile */
+  .projects__heading {
+    margin-top: var(--x2);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .projects__heading {
+    margin-top: var(--x8);
+  }
+}
+
+.projects__items {
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 765px) { /* mobile */
+  .projects__items {
+    margin-top: var(--x2);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .projects__items {
+    margin-top: var(--x4);
+  }
+}
+
+.projects__item {
+  margin-left: var(--default);
+}
+
+@media (max-width: 765px) { /* mobile */
+  .projects__item:not(:first-child) {
+    margin-top: var(--default);
+  }
+}
+@media (min-width: 766px) { /* tablet */
+  .projects__item:not(:first-child) {
+    margin-top: var(--x2);
+  }
+}
+
+/* UTILITIES */
+
+.highlight {
+  padding-left: 1rem;
+  border-left: 1rem solid var(--cyan-4);
+}
